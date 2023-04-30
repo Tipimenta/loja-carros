@@ -1,15 +1,22 @@
-var swiper = new Swiper(".slide-content", {
-    slidePerView: 3,
-    spaceBetween:30,
-    slidesPerGroup: 3,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    },
-});
+const button = document.querySelector(".card-content");
+const button1 = document.querySelector(".card-content1");
+const modal = document.getElementById("mymodal");
+const modal1 = document.getElementById("mymodal1");
+const close = document.querySelector(".close");
+const close1 = document.querySelector(".close1");
+
+button.addEventListener('click', () => {
+    modal.classList.add('modal-active');
+})
+
+close.addEventListener('click', () => {
+    modal.classList.remove('modal-active');
+})
+
+button1.addEventListener('click', () => {
+    modal1.classList.add('modal-active');
+})
+
+close1.addEventListener('click', () => {
+    modal1.classList.remove('modal-active');
+})

@@ -9,6 +9,10 @@
     font-size: 22px;
 }
 
+body{
+    width: 100%;
+ }
+
 #header {
     height: 15vh;
     width: 100%;
@@ -38,14 +42,36 @@ nav ul{
 }
 
 nav ul li{
-    margin-left: 30px;
+    margin-left: 50px;
+
+
 }
 
 nav li a{
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    position: relative;
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     font-family: 'Roboto', sans-serif;
 }
+
+nav li a:after{
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #920D0D;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+nav li a:hover:after{
+    width: 100%; 
+    left: 0; 
+}
+
 
 nav li a:hover{
     color: #920D0D;
@@ -76,20 +102,20 @@ nav li a:active{
 }
 
 .container-card-cars{
-    width: 86%;
+    width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 15px;
 }
 
-.card-content{
+.card-content, .card-content1{
     background-color: #D9D9D9;
-    width: 22%;
-    height: 300px;
+    width: 23%;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,17 +124,18 @@ nav li a:active{
     
 }
 
-.card-content:hover{
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+.card-content:hover, .card-content1:hover{
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
     transition: .7s;
     background-color: #2D2B2B;
+    cursor: pointer;
 }
 
 .card{
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     background-color: #ABABAB;
     border-radius: 5px;
 }
@@ -125,6 +152,11 @@ nav li a:active{
     border: none;
     color: white;
     border-radius: 3px;
+}
+
+.btn-card:hover{
+    border: #ABABAB 2px solid;
+    cursor: pointer;
 }
 
 .contact{
@@ -239,6 +271,7 @@ footer {
 
 .horarios p:nth-child(even) {
     font-weight: 700;
+    text-decoration: underline #920D0D;
 }
 
 .horarios p:nth-child(odd) {
@@ -254,7 +287,8 @@ footer {
 }
 
 .social img {
-    width: 60px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
 }
 
@@ -272,7 +306,6 @@ footer {
     margin-bottom: 15px;
     font-size: 30px;
     color: #ABABAB;
-    text-decoration: underline  #920D0D;
 }
 
 .rodape p {
@@ -283,4 +316,64 @@ footer {
 
 .bold {
     font-weight: bold;
+}
+
+.red{
+    color: #920D0D;
+    margin-bottom: 4px;
+    font-size: 30px;
+}
+
+.card-desc{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 8px;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.card-title{
+    display: flex;
+    justify-content: center;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal, .modal1{
+    position: absolute;
+    background-color: rgba (255, 255, 255, 0.6);
+    display: flex;
+    justify-content: center;
+   align-items: start;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content{
+    
+
+    width: 70%;
+    height: 80vh;
+    position: relative;
+    background-color: #dedcdc;
+    padding: 20px;
+}
+
+.close, .close1{
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 24px;
+    font-size: 48px;
+    cursor: pointer;
 }
