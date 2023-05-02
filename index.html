@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@300;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <script src="https://kit.fontawesome.com/37f8720022.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -39,15 +39,14 @@
     <div class="card-cars">
         <div class="container-card-cars">
 
-
-            <div class="card-content">
+<!--Card com foto e pequena descriçao do carro, clicando nele abre o modal-->
+            <div class="card-content open-modal" data-modal-id="modal-1">
                 <div class="card">
-                    <img class="img-card" src="assets/Image/carros-economicos-1.jpeg">
+                    <img class="img-card" src="assets/Image/carro1.jpeg">
                     <div class="card-desc bold">
                         <div class="card-title">
                             <p class="card-model red">GOL</p>
                         </div>
-
                         <p class="card-marca">VOLKSWAGEN</p>
                         <p class="card-resume">1.8 GL 8V ÁLCOOL 2P MANUAL</p>
                         <p class="card-ano">2000</p>
@@ -55,23 +54,43 @@
                 </div>
             </div>
 
-            
-            <div class="modal" id="mymodal">
+
+            <div class="modal" id="modal-1">
                 <div class="modal-content">
-                    <span class="close">&times;                   
-                    </span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia harum minus molestias porro officiis suscipit praesentium ipsum obcaecati incidunt saepe perferendis vero excepturi corrupti nulla consectetur a, nam atque eos.</p>
+                    <div class="modal-close">
+                        <span class="close">&times;
+                        </span>
+                    </div>
+                    <div class="modal-col">
+                    <div class="modal-info">
+                        <div class="main">
+                            <img id="mainPic" src="assets/Image/carro1.jpeg">
+                        </div>
+                        <ul class="thumbs">
+                            <li class="thumbs-li" id="0" onclick="thumbChange(0)"><img src="assets/Image/carro0.jpeg">
+                            </li>
+                            <li class="thumbs-li" id="1" onclick="thumbChange(1)"><img src="assets/Image/carro1.jpeg">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repellat ex hic expedita
+                            minima molestias dolor. Voluptatem assumenda fugiat nam laboriosam voluptate enim
+                            aliquam
+                            sint a ab, eveniet ducimus veritatis.</p>
+                    </div>
+                </div>
                 </div>
             </div>
 
-            <div class="card-content1">
+<!--Card com foto e pequena descriçao do carro, clicando nele abre o modal-->
+            <div class="card-content" data-modal-id="modal-2">
                 <div class="card">
-                    <img class="img-card" src="assets/Image/carros-economicos-1.jpeg">
+                    <img class="img-card" src="assets/Image/carro1.jpeg">
                     <div class="card-desc bold">
                         <div class="card-title">
                             <p class="card-model red">GOL</p>
                         </div>
-
                         <p class="card-marca">VOLKSWAGEN</p>
                         <p class="card-resume">1.8 GL 8V ÁLCOOL 2P MANUAL</p>
                         <p class="card-ano">2000</p>
@@ -79,18 +98,41 @@
                 </div>
             </div>
 
-            <div class="modal" id="mymodal1">
+            <div class="modal" id="modal-2">
+
                 <div class="modal-content">
-                    <span class="close1">&times;                   
-                    </span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia harum minus molestias porro officiis suscipit praesentium ipsum obcaecati incidunt saepe perferendis vero excepturi corrupti nulla consectetur a, nam atque eos.</p>
+                    <div class="modal-close">
+                        <span class="close">&times;
+                        </span>
+                    </div>
+                   
+                    <div class="modal-col">
+                    <div class="modal-info">
+                        <div class="main">
+                            <img id="mainPic1" src="assets/Image/carro1.jpeg">
+                        </div>
+                        <ul class="thumbs">
+                            <li class="thumbs-li" id="0" onclick="thumbChange(0)"><img src="assets/Image/carro0.jpeg">
+                            </li>
+                            <li class="thumbs-li" id="1" onclick="thumbChange(1)"><img src="assets/Image/carro1.jpeg">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repellat ex hic expedita
+                            minima molestias dolor. Voluptatem assumenda fugiat nam laboriosam voluptate enim
+                            aliquam
+                            sint a ab, eveniet ducimus veritatis.</p>
+                    </div>
+                </div>
                 </div>
             </div>
 
 
             <div class="card-content">
                 <div class="card">
-                    <img class="img-card" src="assets/Image/carros-economicos-1.jpeg">
+                    <img class="img-card" src="assets/Image/carro1.jpeg">
                     <div class="card-desc bold">
                         <div class="card-title">
                             <p class="card-model red">GOL</p>
@@ -105,7 +147,7 @@
 
             <div class="card-content">
                 <div class="card">
-                    <img class="img-card" src="assets/Image/carros-economicos-1.jpeg">
+                    <img class="img-card" src="assets/Image/carro1.jpeg">
                     <div class="card-desc bold">
                         <div class="card-title">
                             <p class="card-model red">GOL</p>
@@ -120,7 +162,7 @@
 
             <div class="card-content">
                 <div class="card">
-                    <img class="img-card" src="assets/Image/carros-economicos-1.jpeg">
+                    <img class="img-card" src="assets/Image/carro1.jpeg">
                     <div class="card-desc bold">
                         <div class="card-title">
                             <p class="card-model red">GOL</p>
@@ -135,7 +177,7 @@
 
             <div class="card-content">
                 <div class="card">
-                    <img class="img-card" src="assets/Image/carros-economicos-1.jpeg">
+                    <img class="img-card" src="assets/Image/carro1.jpeg">
                     <div class="card-desc bold">
                         <div class="card-title">
                             <p class="card-model red">GOL</p>
@@ -148,8 +190,9 @@
                 </div>
             </div>
         </div>
-
     </div>
+
+
     <div class="contact">
 
         <div class="container-card-contact">
@@ -219,6 +262,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 <script src="assets/js/script.js"></script>
 
